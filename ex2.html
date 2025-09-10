@@ -24,8 +24,18 @@
     <button onclick="changeShape()">Make a change!</button>
 
     <script>
-        var square=true;
+        let square = true;
+
        // add code here
+       function changeShape(){
+            if (square == true){
+                document.getElementById("div1").style.borderRadius ="50%";
+            }
+            else{
+                document.getElementById("div1").style.borderRadius="0";
+            }
+        square = !square;
+       }
         
     </script>
 

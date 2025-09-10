@@ -19,8 +19,34 @@
     <script>
         
         // add code here
+
+        // first click
+        // get the value from select item
+        let itemList = document.getElementById("select_item");
         
-        
+
+        function addItem(){
+            // create a new element li
+            let liElement = document.createElement("li");
+
+            // get value from select_list
+            let selection = itemList.value;
+
+            // change it to text node
+            let textNode = document.createTextNode(selection);
+
+            // append text node to li
+            liElement.appendChild(textNode);
+
+            // get the ul element
+            let ulElement = document.getElementById("shopList");
+
+            // append 
+            ulElement.appendChild(liElement);
+        }
+
+        itemList.addEventListener("change", addItem);
+ 
     </script>
 
     
